@@ -4,7 +4,7 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =
+SRC = ft_isalpha.c
 
 OBJS = ${SRC:.c=.o}
 
