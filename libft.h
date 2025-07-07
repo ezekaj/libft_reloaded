@@ -25,6 +25,7 @@ int		ft_tolower(int c);
 int		ft_atoi(char *str);
 
 size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
 
 char	*ft_strchr(char *str, int c);
 
