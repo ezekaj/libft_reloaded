@@ -29,6 +29,7 @@ size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, char *src, size_t dstsize);
 
 char	*ft_strchr(char *str, int c);
+char	*ft_strrchr(char *s, int c);
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
