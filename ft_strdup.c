@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elzekaj <elzekaj@student.42.fr>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-07-13 13:40:29 by elzekaj           #+#    #+#             */
-/*   Updated: 2025-07-13 13:40:29 by elzekaj          ###   ########.fr       */
+/*   Created: 2025-07-13 14:06:38 by elzekaj           #+#    #+#             */
+/*   Updated: 2025-07-13 14:06:38 by elzekaj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char *haystack, char *needle, size_t len)
+char	*ft_strdup(char *s1)
 {
-	size_t	i;
-	size_t	j;
+	char	*ns;
 
-	i = 0;
-	if (needle[0] == '\0')
-		return (haystack);
-	if (len == 0)
-		return (NULL);
-	while (i < len && haystack[i] != '\0')
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
-		{
-			if (needle[j + 1] == '\0')
-				return ((char *)haystack + (i));
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	ns = ft_calloc(ft_strlen(s1) + 1, sizeof(char));
+	if (!ns)
+		return (0);
+	if (!s1)
+		return (0);
+	ns = ft_memcpy(ns, s1, ft_strlen(s1));
+	return (ns);
 }
