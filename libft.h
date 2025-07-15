@@ -35,6 +35,7 @@ char	*ft_strchr(char *str, int c);
 char	*ft_strrchr(char *s, int c);
 char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strdup(char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
